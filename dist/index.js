@@ -1,43 +1,5 @@
+"use strict";var mr=function(t,v){return function(){return v||t((v={exports:{}}).exports,v),v.exports}};var fr=mr(function(kr,zr){
+var n=require('@stdlib/array-base-broadcast-array/dist');function sr(t,v,yr){var F,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,o,w,z,f,i,u,e,x,y,m,s,c,j,k,S,q,b,A,g,l,B,C,D,E,W,X,Y,Z,_,$,p,h,rr,ar,vr,dr,tr,ir,ur,d,r,a,er,xr,nr,or,wr;if(d=v[4],o=d[3],w=d[2],z=d[1],f=d[0],!(o<=0||w<=0||z<=0||f<=0))for(a=n(t[0],v[0],d),er=a.data,r=a.strides,F=r[3],G=r[2],H=r[1],I=r[0],a=n(t[1],v[1],d),xr=a.data,r=a.strides,J=r[3],K=r[2],L=r[1],M=r[0],a=n(t[2],v[2],d),nr=a.data,r=a.strides,N=r[3],O=r[2],P=r[1],Q=r[0],a=n(t[3],v[3],d),or=a.data,r=a.strides,R=r[3],T=r[2],U=r[1],V=r[0],wr=t[4],c=0,q=0,l=0,E=0,x=0;x<f;x++){for(s=0,S=0,g=0,D=0,Y=er[c],$=xr[q],rr=nr[l],dr=or[E],ur=wr[x],e=0;e<z;e++){for(m=0,k=0,A=0,C=0,X=Y[s],_=$[S],h=rr[g],vr=dr[D],ir=ur[e],u=0;u<w;u++){for(y=0,j=0,b=0,B=0,W=X[m],Z=_[k],p=h[A],ar=vr[C],tr=ir[u],i=0;i<o;i++)tr[i]=yr(W[y],Z[j],p[b],ar[B]),y+=F,j+=J,b+=N,B+=R;m+=G,k+=K,A+=O,C+=T}s+=H,S+=L,g+=P,D+=U}c+=I,q+=M,l+=Q,E+=V}}zr.exports=sr
+});var cr=fr();module.exports=cr;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Apply a quaternary callback to elements in four broadcasted input arrays and assign results to elements in a four-dimensional nested output array.
-*
-* @module @stdlib/array-base-broadcasted-quaternary4d
-*
-* @example
-* var add = require( '@stdlib/number-float64-base-add4' );
-* var ones4d = require( '@stdlib/array-base-ones4d' );
-* var zeros4d = require( '@stdlib/array-base-zeros4d' );
-* var bquaternary4d = require( '@stdlib/array-base-broadcasted-quaternary4d' );
-*
-* var shapes = [
-*     [ 1, 3, 1, 1 ],
-*     [ 1, 1, 3, 1 ],
-*     [ 1, 1, 1, 3 ],
-*     [ 1, 1, 1, 1 ],
-*     [ 1, 3, 3, 3 ]
-* ];
-*
-* var x = ones4d( shapes[ 0 ] );
-* var y = ones4d( shapes[ 1 ] );
-* var z = ones4d( shapes[ 2 ] );
-* var w = ones4d( shapes[ 3 ] );
-* var out = zeros4d( shapes[ 4 ] );
-*
-* bquaternary4d( [ x, y, z, w, out ], shapes, add );
-*
-* console.log( out );
-* // => [ [ [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ], [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ], [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ] ] ]
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
