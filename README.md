@@ -97,7 +97,7 @@ bquaternary4d( [ x, y, z, w, out ], shapes, add );
 
 The function accepts the following arguments:
 
--   **arrays**: array-like object containing two input nested arrays and one output nested array.
+-   **arrays**: array-like object containing four input nested arrays and one output nested array.
 -   **shapes**: array shapes.
 -   **fcn**: quaternary function to apply.
 
@@ -149,7 +149,7 @@ var w = filled4dBy( shapes[ 3 ], discreteUniform( -100, 100 ) );
 console.log( w );
 
 var out = zeros4d( shapes[ 4 ] );
-console.log( z );
+console.log( out );
 
 bquaternary4d( [ x, y, z, w, out ], shapes, add );
 console.log( out );
@@ -185,11 +185,6 @@ For more information on the project, filing bug reports and feature requests, an
 [![Chat][chat-image]][chat-url]
 
 ---
-
-## License
-
-See [LICENSE][stdlib-license].
-
 
 ## Copyright
 
@@ -236,8 +231,6 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/array-base-broadcasted-quaternary4d/tree/esm
 [esm-readme]: https://github.com/stdlib-js/array-base-broadcasted-quaternary4d/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/array-base-broadcasted-quaternary4d/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-broadcasted-quaternary4d/main/LICENSE
 
 [@stdlib/array/base/broadcast-array]: https://github.com/stdlib-js/array-base-broadcast-array
 
