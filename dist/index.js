@@ -1,5 +1,43 @@
-"use strict";var mr=function(t,v){return function(){try{return v||t((v={exports:{}}).exports,v),v.exports}catch(o){throw (v=0, o)}};};var yr=mr(function(kr,fr){
-var n=require('@stdlib/array-base-broadcast-array/dist');function sr(t,v,o){var G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,w,z,f,y,i,u,e,x,m,s,c,j,k,S,q,b,A,g,l,B,C,D,E,F,X,Y,Z,_,$,p,h,rr,ar,vr,dr,tr,ir,ur,er,d,r,a,xr,nr,or,wr,zr;if(d=v[4],w=d[3],z=d[2],f=d[1],y=d[0],!(w<=0||z<=0||f<=0||y<=0))for(a=n(t[0],v[0],d),xr=a.data,r=a.strides,G=r[3],H=r[2],I=r[1],J=r[0],a=n(t[1],v[1],d),nr=a.data,r=a.strides,K=r[3],L=r[2],M=r[1],N=r[0],a=n(t[2],v[2],d),or=a.data,r=a.strides,O=r[3],P=r[2],Q=r[1],R=r[0],a=n(t[3],v[3],d),wr=a.data,r=a.strides,T=r[3],U=r[2],V=r[1],W=r[0],zr=t[4],j=0,b=0,B=0,F=0,x=0;x<y;x++){for(c=0,q=0,l=0,E=0,Z=xr[j],p=nr[b],ar=or[B],tr=wr[F],er=zr[x],e=0;e<f;e++){for(s=0,S=0,g=0,D=0,Y=Z[c],$=p[q],rr=ar[l],dr=tr[E],ur=er[e],u=0;u<z;u++){for(m=0,k=0,A=0,C=0,X=Y[s],_=$[S],h=rr[g],vr=dr[D],ir=ur[u],i=0;i<w;i++)ir[i]=o(X[m],_[k],h[A],vr[C]),m+=G,k+=K,A+=O,C+=T;s+=H,S+=L,g+=P,D+=U}c+=I,q+=M,l+=Q,E+=V}j+=J,b+=N,B+=R,F+=W}}fr.exports=sr
-});var cr=yr();module.exports=cr;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Apply a quaternary callback to elements in four broadcasted input arrays and assign results to elements in a four-dimensional nested output array.
+*
+* @module @stdlib/array-base-broadcasted-quaternary4d
+*
+* @example
+* var add = require( '@stdlib/number-float64-base-add4' );
+* var ones4d = require( '@stdlib/array-base-ones4d' );
+* var zeros4d = require( '@stdlib/array-base-zeros4d' );
+* var bquaternary4d = require( '@stdlib/array-base-broadcasted-quaternary4d' );
+*
+* var shapes = [
+*     [ 1, 3, 1, 1 ],
+*     [ 1, 1, 3, 1 ],
+*     [ 1, 1, 1, 3 ],
+*     [ 1, 1, 1, 1 ],
+*     [ 1, 3, 3, 3 ]
+* ];
+*
+* var x = ones4d( shapes[ 0 ] );
+* var y = ones4d( shapes[ 1 ] );
+* var z = ones4d( shapes[ 2 ] );
+* var w = ones4d( shapes[ 3 ] );
+* var out = zeros4d( shapes[ 4 ] );
+*
+* bquaternary4d( [ x, y, z, w, out ], shapes, add );
+*
+* console.log( out );
+* // => [ [ [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ], [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ], [ [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ], [ 4.0, 4.0, 4.0 ] ] ] ]
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
